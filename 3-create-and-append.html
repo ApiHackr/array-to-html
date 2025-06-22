@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement() + append()</title>
+    <style>
+        body {
+            margin: 1rem auto;
+            max-width: 40rem;
+            width: 88%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul></ul>
+    <script>
+        let list = document.querySelector('ul');
+        let fruits = ['Lemon', 'Orange', 'Banana', 'Peach'];
+
+        // Loop, create, and inject in one pass
+        list.innerHTML = fruits.map((fruit) => {
+            return `<li>${fruit}</li>`;
+        }).join('');
+    </script>
+</body>
+
+</html>
