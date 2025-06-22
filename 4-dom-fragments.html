@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement() + append()</title>
+    <style>
+        body {
+            margin: 1rem auto;
+            max-width: 40rem;
+            width: 88%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul></ul>
+    <script>
+        let list = document.querySelector('ul');
+        let fruits = ['Lemon', 'Orange', 'Banana', 'Peach'];
+
+        // Create a fragment
+        let fragment = document.createDocumentFragment();
+
+        // Loop through each fruit
+        for (let fruit of fruits) {
+
+            // Create a list item
+            let li = document.createElement('li');
+            li.textContent = fruit;
+
+            // Add it to the fragment
+            fragment.append(li);
+
+        }
+
+        // Append the fragment in one action
+        list.append(fragment);
+    </script>
+</body>
+
+</html>
