@@ -23,7 +23,18 @@
         // Setup the HTML seting
         let html = '';
 
+        // Loop through each fruit and create a list item
+        for (let fruit of fruits) {
+            html += `<li>${fruit}</li>`;
+        }
 
+        // Alt: using forEach
+        // fruits.forEach((fruit => {
+        //     html += `<li>${fruit}</li>`;
+        // }))
+
+        // Inject the HTML 
+        list.innerHTML = html;
     </script>
 </body>
 
