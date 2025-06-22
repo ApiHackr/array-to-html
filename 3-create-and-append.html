@@ -20,10 +20,17 @@
         let list = document.querySelector('ul');
         let fruits = ['Lemon', 'Orange', 'Banana', 'Peach'];
 
-        // Loop, create, and inject in one pass
-        list.innerHTML = fruits.map((fruit) => {
-            return `<li>${fruit}</li>`;
-        }).join('');
+        // Loop through each fruit
+        for (let fruit of fruits) {
+
+            // Create a list item
+            let li = document.createElement('li');
+            li.textContent = fruit;
+
+            // Inject it into the DOM
+            list.append(li);
+
+        }
     </script>
 </body>
 
